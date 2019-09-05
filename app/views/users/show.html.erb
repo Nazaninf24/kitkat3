@@ -3,7 +3,7 @@
 <br><br><hr><br><br>
 <h3 style="margin-left: 200px;">Votre email : <%=current_user.email%></h3>
 <p><strong>Avatar</strong></p>
-<p><%=image_tag("@user.avatar")%> 
+ 
 <br><br><hr><br><br>
 <h3>Changer d'avatar ?</h3>
 <%= form_tag user_avatars_path(@user), multipart: true do %>
