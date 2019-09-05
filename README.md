@@ -5,8 +5,8 @@ ___
 2- Site Heroku
 3- Attention Bien lire le WIKI c'est tres important
 
-- <https://kitkatclub2.herokuapp.com> :boom:
-- <https://git.heroku.com/kitkat3.git> :boom:
+- <https://kitkatclub.herokuapp.com/> :boom:
+- <https://git.heroku.com/kitkatclub.git> :boom:
   
 ___
 
@@ -40,7 +40,7 @@ ___
 
 - JM doit mettre en contributeur tout le monde
 - dirige toi via ton terminal dans le dossier que tu souhaites
-- git clone <https://github.com/JMD60260/kitkatclub.git>
+- git clone <https://github.com/jb1011/kitkat3.git>
 - cd kitkatclub
 - bundle install
 - rails db:create
