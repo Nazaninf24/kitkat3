@@ -70,3 +70,4 @@ gem 'table_print'
 gem 'owlcarousel-rails'
 gem 'jquery-rails', '~> 4.1', '>= 4.1.1'
 gem 'rails_db', '~> 1.6'
+gem "aws-sdk-s3", require: false
