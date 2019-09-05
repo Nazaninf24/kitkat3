@@ -24,7 +24,6 @@
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
            <%=link_to "My Profile", user_path(current_user.id), :class=>"dropdown-item"%>
           <%=link_to "Log out", destroy_user_session_path, :class => "dropdown-item", method: :delete%>
-
           
 
       <%else%>
