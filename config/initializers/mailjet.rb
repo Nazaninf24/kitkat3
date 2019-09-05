@@ -3,5 +3,5 @@ Mailjet.configure do |config|
   config.api_key = ENV['MJ_APIKEY_PUBLIC']
   config.secret_key = ENV['MJ_APIKEY_PRIVATE']  
   config.api_version = "v3.1"
-  config.end_point = "https://kitkatclub2.herokuapp.com"
+  config.end_point = "jeanmarcdardy@gmail.com"
 end
