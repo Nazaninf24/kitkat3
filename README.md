@@ -20,8 +20,8 @@ ___
 
 - ©Jean-Baptiste DEMENET
 - slack: @Jean-Baptiste :smile:
-- ©Hugo CORDILLOT
-- slack: @Hugo Cordillot :smile:
+- ~~©Hugo CORDILLOT~~
+- ~~slack: @Hugo Cordillot~~ :imp:
 - ©Nazanin FARSHAD
 - slack: @Nazanin :smile:
 - ©Jean-Marc DARDY
@@ -69,3 +69,7 @@ ___
 
 ___
 ![show BDD](app/assets/images/BDD2.png)
+
+##### TRELLO avant celui de FeFe #####
+
+![trello](app/assets/images/trello.png)
