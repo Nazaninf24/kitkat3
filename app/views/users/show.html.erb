@@ -6,7 +6,7 @@
 
 <h3>Avatar actuel</h3>
 <%if @user.avatar.attached?%>
-  <%= image_tag @user.avatar, alt: 'avatar' %>
+  <%= image_tag @user.avatar, size: "250x250", alt: 'avatar' %>
 <%else%>
   <p>=== Il n'y a pas encore d'avatar lié à cet utilisateur ===</p>
 <%end%>
