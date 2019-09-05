@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_one :cart
   has_many :comments
-  has_one_attached :avatars
+  has_one_attached :avatar
   after_create :welcome_send
 
   def welcome_send
