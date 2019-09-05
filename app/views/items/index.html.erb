@@ -1,0 +1,16 @@
+<center>
+  <div class="main">
+<% @items.each do |cat| %>
+
+      <div class="card" style="width: 18rem;">
+
+        <div class="card-body">
+          <div><%= link_to image_tag(cat.image_url, width: 250, height: 200, style: "border-radius: 5px") + "", cat %></div>
+          <h5 class="card-title"><%= link_to cat.title, cat %></h5>
+          <p class="card-text"><%= cat.price %>€</p>
+        </div>
+      </div>
+
+<%end%> 
+</div>
+</center>

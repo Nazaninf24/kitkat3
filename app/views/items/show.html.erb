@@ -1,0 +1,52 @@
+<center><h1><%=@item.title%></h1></center>
+	<br>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8 my-image">
+				<%=image_tag(@item.image_url, style: "border-radius: 5px") %>
+			</div>
+			<div class="col-md-4 my-comment">
+				<div class="card text-dark mb-3">
+					<div class="card-header"><center>Mon Chaton</center></div>
+					<div class="card-body">
+						<h4 class="card-title">Description</h4>
+						<p class="card-text"><%=@item.description%></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<hr>
+		<div class="row">
+			<div class="col my-bar">
+				<div class="list-group">
+					<hr>
+					<center>
+						<h4>Toutes nos photo sont à petit prix <%=@item.price%> €</h4> <br>
+						<div class="quickview-btns">
+							<%= button_to "Ajouter au panier", line_items_path(item_id: @item.id), class: 'btn btn-outline-primary' %>
+						</div>
+
+					</center>
+				</div>		
+			</div>
+		</div>
+	<br>
+</div>
+<hr>
+<center><h2>Vos Commentaires</h2></center>
+<div class="container">
+<div class="row justify-content-center align-items-start">
+	
+	<div>
+		<%=render 'comments/comment'%>
+	</div>
+</div>
+</div>
+<hr>
+<div class="row justify-content-center">
+	<div class="col-md-4"></div>
+	<div class="col-md-4">
+		<%=render 'comments/form'%>
+	</div>
+</div>
+<br><br>

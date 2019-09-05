@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+       <script src="https://code.jquery.com/jquery-3.3.1.js"integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Kitkatclub</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', 'data-turbolinks-track': 'reload', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <%= favicon_link_tag asset_path('logo.png') %>
+  </head>
+
+  <body>
+    <%= render 'layouts/alert'%>
+    <%= render 'layouts/navigation'%>
+    <div class="main"><%= yield %></div>
+    <%= render 'layouts/footer'%>
+
+
+  </body>
+</html>
+ 

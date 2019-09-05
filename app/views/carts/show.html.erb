@@ -1,0 +1,87 @@
+<br>
+<br>
+<br>
+<br>
+<br>
+<center><h2>Panier</h2></center><br><hr><br>
+<!-- Start Site Content -->
+<div class="site-content ptb-100">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <!-- Start Content Area -->
+        <div id="primary" class="content-area">
+          <div class="row">
+            <div class="col-xs-12 col-sm-9 col-md-9">
+              <!-- Start Table -->
+              <div class="table-responsive">
+                <!-- debut table -->
+                
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Produit</th>
+                      <th scope="col">Nom</th>
+                      <th scope="col">Prix</th>
+                      <th scope="col">Quantité</th>
+                      <th scope="col">Total</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <% @cart.line_items.each do |chat| %>
+                    <tr>
+                      <th scope="row">Photo</th>
+                      <td><%= chat.item.title %></td>
+                      <td><%= number_to_currency(chat.item.price, unit: "€", separator: ".", format: "%n %u") %></td>
+                      <td><%= chat.quantity %></td>
+                      <td><%= number_to_currency(chat.total, unit: "€", separator: ".", format: "%n %u") %></td>
+                    </tr>
+                    <%end%>
+                  </tbody>
+                </table>
+                <!-- fin table -->
+              </div>
+              <!-- End Table -->
+            </div>
+            <div class="col-xs-12 col-sm-3 col-md-3">
+              <!-- Start Cart Widget -->
+              <div class="cart-widget">
+                <p class="uppercase">
+                  <strong>Total du panier</strong>
+                </p>
+                <!-- Start Table -->
+                <table class="table widget-table">
+                  <tbody>
+                    <tr>
+                      <td>Sous-total Panier</td>
+                      <td class="text-right"><%= number_to_currency(@cart.total, unit: "€", separator: ".", format: "%n %u") %></td>
+                    </tr>
+                    <tr>
+                      <td>Frais de port</td>
+                      <td class="text-right">Free</td>
+                    </tr>
+                    <tr>
+                      <td>Total TTC</td>
+                      <td class="text-right"><%= number_to_currency(@cart.total, unit: "€", separator: ".", format: "%n %u") %></td>
+                    </tr>
+                    <tr>
+                      <td><%= button_to "vider le panier", @cart, method: :delete, data: { confirm: "Êtes-vous sûr ?" }, class: "btn btn-outline-primary btn-sm" %></td>
+                      <td class="text-right"><%= button_to "Paiement", new_order_path, method: :get, class: "btn btn-primary btn-sm", style: "float: right;" %></td>
+                    </tr>
+                  </tbody>
+                </table>
+                <!-- End Table -->
+                <!-- Update Buttons -->
+                <!-- End Update Buttons -->
+              </div>
+              <!-- End Cart Widget -->
+            </div>
+          </div>
+        </div>
+        <!-- End Content Area -->
+      </div>
+    </div>
+  </div>
+</div>
+<br><hr><br>
+<!-- End Site Content -->

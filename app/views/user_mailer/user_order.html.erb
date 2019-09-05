@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Nous avons bien recu votre commande, <%= @email %></h1>
+    <p>
+      Vous trouverez ci-joint les produits que vous avez choisis.
+    </p>
+    <p>
+      Le total de votre commande est: <%= @cart.total %>
+    </p>
+    <p>Nous vous remercions pour votre confiance.</p>
+    <p>A bientôt sur KITKATCLUB</p>
+
+    <p>
+      <% @cart.line_items.each do |li| %>
+       <img src="<%= li.item.image_url %>">
+      <% end %>
+    </p>
+  </body>
+</html>
